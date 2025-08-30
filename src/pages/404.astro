@@ -2,6 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+var BASE_URL = import.meta.env.BASE_URL ;
+if(BASE_URL != '/'){
+  BASE_URL += '/';
+}
+
 ---
 
 <Layout title="Page Not Found - Sassify">
@@ -15,10 +21,10 @@ import Footer from '../components/Footer.astro';
           The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </p>
         <div class="flex justify-center gap-4 flex-wrap">
-          <a href="/" class="btn-primary">
+          <a href=`${BASE_URL}` class="btn-primary">
             Return Home
           </a>
-          <a href="/contact" class="btn-secondary">
+          <a href=`${BASE_URL}contact` class="btn-secondary">
             Contact Support
           </a>
         </div>
