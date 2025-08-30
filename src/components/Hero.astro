@@ -2,7 +2,11 @@
 import { Image } from 'astro:assets';
 import phonePreview from '../assets/phone-app-preview-3.webp'
 import phonePreview_dark from '../assets/phone-app-preview-4.webp'
-import clientCard_preview from '../assets/client-card-preview.webp'
+
+var BASE_URL = import.meta.env.BASE_URL ;
+if(BASE_URL != '/'){
+  BASE_URL += '/';
+}
 ---
 <section class="relative pt-32 pb-20 md:pt-32 overflow-hidden hero-section">
   <div class="container-custom relative z-10">
@@ -19,7 +23,7 @@ import clientCard_preview from '../assets/client-card-preview.webp'
           <a href="/download" class="btn-primary">
            Descarga la App 
           </a>
-          <a href="/contact"  class="btn-outline flex items-center">
+          <a href=`${BASE_URL}contact`  class="btn-outline flex items-center">
            Contactanos 
           </a>
         </div>

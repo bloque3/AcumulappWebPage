@@ -1,4 +1,9 @@
 ---
+var BASE_URL = import.meta.env.BASE_URL ;
+if(BASE_URL != '/'){
+  BASE_URL += '/';
+}
+
 const plans = [
   {
     name: "Gratis",
@@ -13,7 +18,7 @@ const plans = [
     cta: "Empezar Gratis",
     popular: false,
     color: "primary",
-    href: "/download"
+    href: `${BASE_URL}download`
 
   },
   {
@@ -30,7 +35,7 @@ const plans = [
     cta: "Elegir Plan Pro",
     popular: true,
     color: "secondary",
-    href: "/contact"
+    href: `${BASE_URL}contact`
   }
 ];
 ---
@@ -90,7 +95,7 @@ const plans = [
     
     <div class="mt-12 text-center">
       <p class="text-gray-600 dark:text-gray-300 mb-2">¿Buscas un descuento? Ofrecemos un precio especial en pagos anuales.</p>
-      <a href="/contact" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Contáctanos para más información</a>
+      <a href=`${BASE_URL}contact` class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Contáctanos para más información</a>
     </div>
   </div>
 </section>

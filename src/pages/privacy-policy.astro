@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
+
+var BASE_URL = import.meta.env.BASE_URL ;
+if(BASE_URL != '/'){
+  BASE_URL += '/';
+}
 ---
 
 <Layout title="Privacy Policy - Sassify">
@@ -84,7 +89,7 @@ import HeroSection from '../components/HeroSection.astro';
           
           <h2>Contact Us</h2>
           <p>
-            If you have any questions about this Privacy Policy, please <a href="/contact">contact us</a>.
+            If you have any questions about this Privacy Policy, please <a href=`${BASE_URL}contact`>contact us</a>.
           </p>
         </div>
       </div>

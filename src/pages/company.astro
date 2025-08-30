@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
+
+var BASE_URL = import.meta.env.BASE_URL ;
+if(BASE_URL != '/'){
+  BASE_URL += '/';
+}
 ---
 
 <Layout title="About Our Company - Acumulapp">
@@ -139,7 +144,7 @@ import HeroSection from '../components/HeroSection.astro';
           <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             We're always looking for talented individuals who share our passion for innovation and excellence. Check out our current openings and join us on our mission.
           </p>
-          <a href="/career" class="btn-primary">View Open Positions</a>
+          <a href=`${BASE_URL}career` class="btn-primary">View Open Positions</a>
         </div>
       </div>
     </section>

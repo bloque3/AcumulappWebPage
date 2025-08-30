@@ -3,38 +3,43 @@ import appStoreBadge from '../assets/download-on-the-app-store-.svg';
 import googlePlayBadge from '../assets/google-play-badge-logo-svgrepo-com.svg';
 const currentYear = new Date().getFullYear();
 
-const footerLinks = [
-  {
+var BASE_URL = import.meta.env.BASE_URL ;
+if(BASE_URL != '/'){
+  BASE_URL += '/';
+}
+
+
+const footerLinks = [ {
     title: "Home",
     links: [
-      { text: "Home", url: "/" },
-      { text: "Features", url: "/features" },
-      { text: "Pricing", url: "/pricing" },
-      { text: "Contact", url: "/contact" }
+    { text: "Home", url:`${BASE_URL}`  },
+      { text: "Features", url: `${BASE_URL}features` },
+      { text: "Pricing", url: `${BASE_URL}pricing` },
+      { text: "Contact", url: `${BASE_URL}contact` }
     ]
   },
   {
     title: "Product",
     links: [
-    {text: "Download", url: "/download"},
-      { text: "Features", url: "/#features" },
-      { text: "Pricing", url: "/pricing" },
-      { text: "FAQ", url: "/faqs" },
+    {text: "Download", url: `${BASE_URL}download`},
+      { text: "Features", url: `${BASE_URL}#features` },
+      { text: "Pricing", url: `${BASE_URL}pricing` },
+      { text: "FAQ", url: `${BASE_URL}faqs` },
     ]
   },
   {
     title: "Resources",
     links: [
-      { text: "404 Page", url: "/404" }
+      { text: "404 Page", url: `${BASE_URL}404` }
     ]
   },
   {
     title: "Company",
     links: [
-      { text: "About Us", url: "/company" },
-      { text: "Contact", url: "/contact" },
-      { text: "Privacy Policy", url: "/privacy-policy" },
-      { text: "Terms of Service", url: "/terms-conditions" }
+      { text: "About Us", url: `${BASE_URL}company` },
+      { text: "Contact", url: `${BASE_URL}contact` },
+      { text: "Privacy Policy", url: `${BASE_URL}privacy-policy` },
+      { text: "Terms of Service", url: `${BASE_URL}terms-conditions` }
     ]
   }
 ];
@@ -44,7 +49,7 @@ const footerLinks = [
   <div class="container-custom">
     <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
       <div class="md:col-span-2 lg:col-span-2">
-        <a href="/" class="flex items-center mb-6" aria-label="Go to homepage">
+        <a href=`${BASE_URL}` class="flex items-center mb-6" aria-label="Go to homepage">
           <svg class="h-8 w-auto text-primary-400" |xmlns="http://www.w3.org/2000/svg" 
               xmlns:xlink="http://www.w3.org/1999/xlink"
               width="240pt"
@@ -102,7 +107,7 @@ const footerLinks = [
           <ul class="space-y-2">
             {column.links.map(link => (
               <li>
-                <a href={link.url} class="text-gray-400 hover:text-primary-400 transition-colors">{link.text}</a>
+                <a href=`${link.url}` class="text-gray-400 hover:text-primary-400 transition-colors">{link.text}</a>
               </li>
             ))}
           </ul>
@@ -116,8 +121,8 @@ const footerLinks = [
           &copy; {currentYear} Acumulapp. All rights reserved.
         </p>
         <div class="flex space-x-6">
-          <a href="/privacy-policy" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Privacy Policy</a>
-          <a href="/terms-conditions" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Terms of Service</a>
+          <a href=`${BASE_URL}privacy-policy` class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Privacy Policy</a>
+          <a href=`${BASE_URL}terms-conditions` class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Terms of Service</a>
           <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Cookie Policy</a>
         </div>
       </div>
