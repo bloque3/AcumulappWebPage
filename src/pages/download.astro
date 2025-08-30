@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import appStoreBadge from '../assets/download-on-the-app-store-.svg';
+import googlePlayBadge from '../assets/google-play-badge-logo-svgrepo-com.svg';
+---
+
+<Layout title="Descarga Acumulapp">
+  <Header />
+  <section class="relative overflow-hidden bg-linear-to-b from-primary-100 to-white dark:from-primary-950 dark:to-secondary-950 pt-24 md:pt-32 pb-16 md:pb-20">
+  <div class="absolute inset-0 z-0 opacity-30">
+    <div class="absolute inset-0 bg-grid-pattern"></div>
+  </div>
+  
+  <div class="container-custom relative z-10">
+    <div class="text-center max-w-3xl mx-auto px-4">
+        <div class="flex items-center justify-center mb-6 animate-slide-down">
+            <svg class="h-12 w-auto text-primary-400" |xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="240pt"
+                height="240pt"
+                viewBox="0 0 240 240">
+            <defs>
+              <linearGradient id="gradient0" gradientUnits="objectBoundingBox" x1="0.732831714285146" y1="0.723585055665775" x2="0.382551680374386" y2="0.212533499858289" spreadMethod="pad">
+              <stop stop-color="#6400ab" offset="0" stop-opacity="1"/>
+              <stop stop-color="#ab008e" offset="1" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+            <path id="shape0" transform="matrix(1.61959863086815 0 0 1.61959863086815 57.6455492885703 5.44638605416312)" fill="url(#gradient0)" fill-rule="evenodd" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M57.9321 107.824L16.3209 107.803L25.6704 89.5848L49.2248 89.5418L57.9321 107.824M0 79.1218L38.5189 0L102.747 140.848L79.4061 140.848L38.0283 50.7018L23.6154 79.1218L0 79.1218" />
+            </svg>
+            <span class="ml-2 text-3xl font-display font-semibold text-gray-900 dark:text-white">Acumulapp</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 text-gray-900 dark:text-white animate-slide-down">
+            Descarga <span class="text-accent-500">Acumulapp</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 md:mb-8 animate-slide-up" style="animation-delay: 200ms">
+            Disponible para iOS y Android. Comienza a fidelizar a tus clientes hoy mismo.
+        </p>
+        <div class="flex flex-col items-center justify-center space-y-4  animate-slide-up" style="animation-delay: 400ms">
+            <a href="#" class="w-fit">
+                <img src={appStoreBadge.src} alt="Download on the App Store" class="w-48 h-auto" />
+            </a>
+            <a href="#" class="w-fit">
+                <img src={googlePlayBadge.src} alt="Get it on Google Play" class="w-48 h-auto" />
+            </a>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Animated Shapes -->
+  <div class="absolute -bottom-16 left-0 right-0 flex justify-center">
+    <div class="w-48 md:w-64 h-48 md:h-64 bg-accent-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+  </div>
+</section>
+  <Footer />
+</Layout>

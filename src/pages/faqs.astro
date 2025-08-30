@@ -1,0 +1,177 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+
+const faqCategories = [
+  {
+    id: 'general',
+    navTitle: 'General',
+    title: 'Preguntas Generales',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>',
+    questions: [
+      {
+        question: '¿Qué es Acumulapp?',
+        answer: 'Acumulapp es una aplicación de fidelización que digitaliza el sistema tradicional de tarjetas de sellos. Permite a los negocios crear y gestionar programas de lealtad de forma personalizada, y a los clientes acumular sellos y recompensas desde su móvil, sin perder tarjetas de cartón.'
+      },
+      {
+        question: '¿Cómo funciona el sistema de sellado?',
+        answer: 'Es muy sencillo y seguro. El cliente genera un código QR único en su app. El negocio lo escanea con su propio dispositivo para agregar un sello, activar una tarjeta o redimir una recompensa. Esto asegura que ambas partes estén de acuerdo y evita fraudes.'
+      },
+      {
+        question: '¿Necesito una conexión a internet para usar Acumulapp?',
+        answer: 'Sí, se requiere una conexión a internet tanto para los negocios como para los clientes, ya que todas las acciones (generar QR, escanear, ver progreso) se sincronizan en tiempo real con nuestros servidores.'
+      },
+    ]
+  },
+  {
+    id: 'precios',
+    navTitle: 'Precios',
+    title: 'Precios y Planes',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>',
+    questions: [
+      {
+        question: '¿Acumulapp es gratis para los clientes?',
+        answer: 'Sí, la aplicación es y será siempre completamente gratuita para los clientes que acumulan sellos y recompensas.'
+      },
+      {
+        question: '¿Qué costo tiene para los negocios?',
+        answer: 'Ofrecemos un plan gratuito que permite a los negocios tener 1 tarjeta de fidelización y hasta 20 clientes activos. Para un crecimiento sin límites, nuestro plan de pago ofrece tarjetas y clientes activos ilimitados.'
+      },
+      {
+        question: '¿Cómo funciona el plan de pago?',
+        answer: 'El plan de pago es una suscripción mensual. También ofrecemos un descuento especial si eliges hacer un único pago anual. Puedes ver los detalles en nuestra <a href="/pricing" class="text-primary-600 dark:text-primary-400 hover:underline">página de precios</a>.'
+      },
+    ]
+  },
+  {
+    id: 'negocios',
+    navTitle: 'Negocios',
+    title: 'Para Negocios',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>',
+    questions: [
+      {
+        question: '¿Qué necesito para escanear los códigos QR de mis clientes?',
+        answer: 'No necesitas ningún dispositivo especial. Solo un smartphone o tablet con acceso a la cámara donde hayas iniciado sesión con tu cuenta de Acumulapp.'
+      },
+      {
+        question: '¿Puedo personalizar mis tarjetas de fidelización?',
+        answer: '¡Totalmente! Tienes control completo para definir el nombre de la tarjeta, la cantidad de sellos necesarios, la recompensa, los días de vigencia y otras restricciones que consideres importantes.'
+      },
+      {
+        question: '¿Puedo gestionar múltiples sucursales o empleados?',
+        answer: 'Por el momento, cada cuenta de negocio es independiente. Ya estamos trabajando en una futura actualización que permitirá gestionar colaboradores con roles y permisos específicos para una misma cuenta.'
+      },
+      {
+        question: '¿Qué información de mis clientes puedo ver?',
+        answer: 'La privacidad es fundamental. Lo único que puedes ver es un código único asociado a la tarjeta de un cliente para gestionar sus sellos y recompensas. No tienes acceso a su información personal.'
+      }
+    ]
+  },
+  {
+    id: 'clientes',
+    navTitle: 'Clientes',
+    title: 'Para Clientes',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>',
+    questions: [
+      {
+        question: '¿Qué pasa si pierdo o cambio mi teléfono?',
+        answer: 'No te preocupes, tu progreso está a salvo. Toda tu información se guarda en tu cuenta. Simplemente descarga Acumulapp en tu nuevo dispositivo e inicia sesión con tu usuario y contraseña (o con tu cuenta de Google) para recuperar todas tus tarjetas y sellos.'
+      },
+      {
+        question: '¿Cómo encuentro negocios que usan Acumulapp?',
+        answer: 'Dentro de la aplicación encontrarás un buscador donde podrás descubrir nuevos negocios por nombre o categoría. También podrás ver su perfil, horarios, redes sociales y las tarjetas de fidelización que ofrecen.'
+      },
+      {
+        question: '¿Recibiré notificaciones?',
+        answer: 'Sí. Te enviaremos notificaciones para mantenerte al día: cuando recibas un nuevo sello, cuando completes una tarjeta y estés listo para reclamar tu recompensa, y cuando una de tus tarjetas esté a punto de vencer.'
+      }
+    ]
+  },
+  {
+    id: 'soporte',
+    navTitle: 'Soporte',
+    title: 'Soporte',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>',
+    questions: [
+      {
+        question: '¿Cómo puedo contactar a soporte si tengo un problema?',
+        answer: 'Estamos aquí para ayudarte. Puedes contactarnos a través de nuestro correo electrónico, chat de WhatsApp o el formulario de contacto en nuestra página web.'
+      },
+      {
+        question: '¿Cuál es el horario de atención?',
+        answer: 'Para soporte en vivo a través de WhatsApp, nuestro horario es de 8:00 am a 12:00 pm y de 2:00 pm a 6:00 pm. Los correos y formularios se responden en un plazo de 24 horas hábiles.'
+      },
+      {
+        question: '¿Tienen tutoriales o guías de uso?',
+        answer: 'Actualmente estamos desarrollando un centro de ayuda completo con documentación y videotutoriales para que puedas sacar el máximo provecho de Acumulapp. ¡Estará disponible muy pronto!'
+      }
+    ]
+  }
+];
+---
+
+<Layout title="Preguntas Frecuentes - Acumulapp">
+  <Header />
+  <main>
+    <HeroSection 
+      title="Preguntas Frecuentes" 
+      highlightText="Preguntas"
+      description="Encuentra respuestas a las dudas más comunes sobre Acumulapp y nuestros servicios."
+    />
+    
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <!-- FAQ Categories Navigation -->
+          <div class="flex flex-wrap justify-center gap-4 mb-12">
+            {faqCategories.map((category, index) => (
+              <a 
+                href={`#${category.id}`} 
+                class:list={[
+                  "px-4 py-2 rounded-full font-medium text-sm transition-colors",
+                  index === 0 
+                    ? "bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-800" 
+                    : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                ]}
+              >
+                {category.navTitle}
+              </a>
+            ))}
+          </div>
+          
+          <!-- FAQ Sections -->
+          {faqCategories.map(category => (
+            <div id={category.id} class="mb-16 scroll-mt-24">
+              <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <span class="inline-block rounded-full bg-primary-100 dark:bg-primary-900 p-2 mr-3">
+                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" set:html={category.icon} />
+                </span>
+                {category.title}
+              </h2>
+              
+              <div class="space-y-6">
+                {category.questions.map(faq => (
+                  <div class="card p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">{faq.question}</h3>
+                    <p class="text-gray-600 dark:text-gray-300" set:html={faq.answer}></p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+          
+          <div class="text-center mt-16">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">¿Aún tienes dudas?</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-8">
+              Nuestro equipo está aquí para ayudarte. Contáctanos y te responderemos lo antes posible.
+            </p>
+            <a href="/contact" class="btn-primary">Contactar a Soporte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

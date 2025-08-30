@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ContactForm from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<Layout title="Contactanos - Acumulapp">
+  <Header />
+  <main>
+    <HeroSection 
+      title="Contactanos" 
+      description="Estamos aquí para responder a cualquier pregunta que tegas hacerla sobre nuestro servicios"
+    />
+    <ContactForm />
+  </main>
+  <Footer />
+</Layout> 

@@ -1,0 +1,27 @@
+{
+  "name": "larry-xue/astro-sassify-template",
+  "description": "A template for creating a SaaS landing page with Astro and Tailwind CSS",
+  "author": "Larry Xue",
+  "license": "MIT",
+  "homepage": "https://astro-sassify.larryxue.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larry-xue/astro-sassify-template.git"
+  },
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro build && astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.4.8",
+    "@tailwindcss/vite": "^4.1.11",
+    "alpinejs": "^3.14.9",
+    "astro": "^5.10.1",
+    "tailwindcss": "^4.1.11"
+  }
+}
