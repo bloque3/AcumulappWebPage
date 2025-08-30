@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://Camilo-845.github.io',
   base: '/AcumulappWebPage',
   integrations: [
     alpinejs()
