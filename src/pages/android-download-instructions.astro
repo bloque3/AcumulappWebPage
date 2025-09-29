@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+
+<Layout title="Descarga Acumulapp para Android">
+  <Header />
+  <section class="relative overflow-hidden bg-linear-to-b from-primary-100 to-white dark:from-primary-950 dark:to-secondary-950 pt-24 md:pt-32 pb-16 md:pb-20">
+    <div class="absolute inset-0 z-0 opacity-30">
+      <div class="absolute inset-0 bg-grid-pattern"></div>
+    </div>
+    
+    <div class="container-custom relative z-10">
+      <div class="text-center max-w-3xl mx-auto px-4">
+          <div class="flex items-center justify-center mb-6 animate-slide-down">
+              <svg class="h-12 w-auto text-primary-400" xmlns="http://www.w3.org/2000/svg" 
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="240pt"
+                  height="240pt"
+                  viewBox="0 0 240 240">
+              <defs>
+                <linearGradient id="gradient0" gradientUnits="objectBoundingBox" x1="0.732831714285146" y1="0.723585055665775" x2="0.382551680374386" y2="0.212533499858289" spreadMethod="pad">
+                <stop stop-color="#6400ab" offset="0" stop-opacity="1"/>
+                <stop stop-color="#ab008e" offset="1" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              <path id="shape0" transform="matrix(1.61959863086815 0 0 1.61959863086815 57.6455492885703 5.44638605416312)" fill="url(#gradient0)" fill-rule="evenodd" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M57.9321 107.824L16.3209 107.803L25.6704 89.5848L49.2248 89.5418L57.9321 107.824M0 79.1218L38.5189 0L102.747 140.848L79.4061 140.848L38.0283 50.7018L23.6154 79.1218L0 79.1218" />
+              </svg>
+              <span class="ml-2 text-3xl font-display font-semibold text-gray-900 dark:text-white">Acumulapp</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 text-gray-900 dark:text-white animate-slide-down">
+              Instrucciones de descarga para <span class="text-accent-500">Android</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 md:mb-8 animate-slide-up" style="animation-delay: 200ms">
+              Sigue estos pasos para instalar Acumulapp en tu dispositivo Android.
+          </p>
+      </div>
+    </div>
+    
+    <!-- Animated Shapes -->
+    <div class="absolute -bottom-16 left-0 right-0 flex justify-center">
+      <div class="w-48 md:w-64 h-48 md:h-64 bg-accent-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white dark:bg-secondary-950">
+    <div class="container-custom px-4">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          Descarga la aplicación
+        </h2>
+        <a href="https://github.com/Camilo-845/AcumulappWebPage/releases/download/v0.1.0-beta/app-release.apk" 
+           class="inline-block bg-primary-500 hover:bg-primary-600 text-white font-bold py-4 px-10 rounded-lg text-xl transition-colors duration-300 mb-12 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+           target="_blank"
+           rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Descargar APK
+        </a>
+      </div>
+  
+      <div class="max-w-4xl mx-auto mt-12">
+        <h3 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">Paso a paso para la instalación</h3>
+        <ol class="relative border-l-2 border-primary-200 dark:border-primary-800 space-y-10">
+          <li class="ml-8">
+            <span class="absolute flex items-center justify-center w-10 h-10 bg-primary-100 rounded-full -left-5 ring-8 ring-white dark:ring-secondary-950 dark:bg-primary-900">
+              <span class="font-bold text-lg text-primary-800 dark:text-primary-300">1</span>
+            </span>
+            <div class="p-4 bg-gray-50 dark:bg-secondary-900 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Descarga el archivo</h4>
+              <p class="text-base font-normal text-gray-600 dark:text-gray-400">Haz clic en el botón "Descargar APK" para iniciar la descarga del instalador.</p>
+            </div>
+          </li>
+          <li class="ml-8">
+            <span class="absolute flex items-center justify-center w-10 h-10 bg-primary-100 rounded-full -left-5 ring-8 ring-white dark:ring-secondary-950 dark:bg-primary-900">
+              <span class="font-bold text-lg text-primary-800 dark:text-primary-300">2</span>
+            </span>
+            <div class="p-4 bg-gray-50 dark:bg-secondary-900 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Busca el archivo descargado</h4>
+              <p class="text-base font-normal text-gray-600 dark:text-gray-400">Abre el administrador de archivos de tu dispositivo y ve a la carpeta de descargas para encontrar el archivo <code>Acumulapp.apk</code>.</p>
+            </div>
+          </li>
+          <li class="ml-8">
+            <span class="absolute flex items-center justify-center w-10 h-10 bg-primary-100 rounded-full -left-5 ring-8 ring-white dark:ring-secondary-950 dark:bg-primary-900">
+              <span class="font-bold text-lg text-primary-800 dark:text-primary-300">3</span>
+            </span>
+            <div class="p-4 bg-gray-50 dark:bg-secondary-900 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Permite instalaciones de orígenes desconocidos</h4>
+              <p class="text-base font-normal text-gray-600 dark:text-gray-400">Al intentar abrir el archivo APK, tu dispositivo te pedirá que permitas la instalación desde "orígenes desconocidos". Ve a "Configuración", luego a "Seguridad" y activa la opción. Este paso es crucial para instalar apps fuera de la Play Store.</p>
+            </div>
+          </li>
+          <li class="ml-8">
+            <span class="absolute flex items-center justify-center w-10 h-10 bg-primary-100 rounded-full -left-5 ring-8 ring-white dark:ring-secondary-950 dark:bg-primary-900">
+              <span class="font-bold text-lg text-primary-800 dark:text-primary-300">4</span>
+            </span>
+            <div class="p-4 bg-gray-50 dark:bg-secondary-900 rounded-lg border border-gray-200 dark:border-gray-700">
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Instala la aplicación</h4>
+              <p class="text-base font-normal text-gray-600 dark:text-gray-400">Una vez concedidos los permisos, pulsa sobre el archivo APK de nuevo y selecciona "Instalar". ¡Y listo! Ya puedes empezar a usar Acumulapp.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

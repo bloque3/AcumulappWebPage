@@ -35,7 +35,7 @@ const plans = [
     cta: "Elegir Plan Pro",
     popular: true,
     color: "secondary",
-    href: `${BASE_URL}contact`
+    href: `https://wa.link/4pb3ct`
   }
 ];
 ---
@@ -85,6 +85,7 @@ const plans = [
           
           <a 
             href={plan.href} 
+            target="_blank"
             class={`w-full btn ${plan.popular ? `bg-secondary-600 hover:bg-secondary-700 text-white focus:ring-secondary-500` : 'btn-outline'}`}
           >
             {plan.cta}
