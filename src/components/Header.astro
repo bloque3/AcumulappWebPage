@@ -5,13 +5,13 @@ if(BASE_URL != '/'){
 }
 
 const allPages = [
-  { text: "Home", url: BASE_URL },
-  { text: "Pricing", url: `${BASE_URL}pricing` },
-  { text: "FAQ", url: `${BASE_URL}faqs` },
-  { text: "About Us", url: `${BASE_URL}company` },
-  { text: "Contact", url: `${BASE_URL}contact` },
-  { text: "Privacy Policy", url: `${BASE_URL}privacy-policy` },
-  { text: "Terms of Service", url: `${BASE_URL}terms-conditions` },
+  { text: "Inicio", url: BASE_URL },
+  { text: "Precio", url: `${BASE_URL}pricing` },
+  { text: "Preguntas Frecuentes", url: `${BASE_URL}faqs` },
+  { text: "Sobre Nosotros", url: `${BASE_URL}company` },
+  { text: "Contacto", url: `${BASE_URL}contact` },
+  { text: "Politica de Privacidad", url: `${BASE_URL}privacy-policy` },
+  { text: "Terminos y Condiciones", url: `${BASE_URL}terms-conditions` },
 ];
 ---
 <header class="fixed w-full bg-white/90 dark:bg-secondary-950/90 backdrop-blur-xs z-50 py-4 transition-colors duration-300">
@@ -20,8 +20,6 @@ const allPages = [
       <!-- Elephant Logo SVG -->
       <svg class="h-10 w-auto"| xmlns="http://www.w3.org/2000/svg" 
           xmlns:xlink="http://www.w3.org/1999/xlink"
-          xmlns:krita="http://krita.org/namespaces/svg/krita"
-          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
           width="240pt"
           height="240pt"
           viewBox="0 0 240 240">
@@ -33,15 +31,15 @@ const allPages = [
       </defs>
       <path id="shape0" transform="matrix(1.61959863086815 0 0 1.61959863086815 57.6455492885703 5.44638605416312)" fill="url(#gradient0)" fill-rule="evenodd" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M57.9321 107.824L16.3209 107.803L25.6704 89.5848L49.2248 89.5418L57.9321 107.824M0 79.1218L38.5189 0L102.747 140.848L79.4061 140.848L38.0283 50.7018L23.6154 79.1218L0 79.1218" sodipodi:nodetypes="cccccccccccc"/>
       </svg>
-      <span class="ml-2 text-xl font-display font-semibold text-secondary-900 dark:text-white">Acumulapp</span>
+      <span class="ml-0 text-xl font-display font-semibold text-secondary-900 dark:text-white">cumulapp</span>
     </a>
     
     <nav class="hidden md:flex items-center space-x-8">
-      <a href=`${BASE_URL}` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Home</a>
-      <a href=`${BASE_URL}download` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Download</a>
-      <a href=`${BASE_URL}#features` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Features</a>
-      <a href=`${BASE_URL}pricing` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Pricing</a>
-      <a href=`${BASE_URL}contact` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Contact</a>
+      <a href=`${BASE_URL}` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Inicio</a>
+      <a href=`${BASE_URL}download` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Descargar</a>
+      <a href=`${BASE_URL}#features` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Caracteristicas</a>
+      <a href=`${BASE_URL}pricing` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Precio</a>
+      <a href=`${BASE_URL}contact` class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">Contacto</a>
       
       <!-- All Pages Dropdown -->
       <div x-data="{ open: false }" class="relative">
@@ -50,7 +48,7 @@ const allPages = [
           @click.away="open = false"
           class="flex items-center text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors"
         >
-          All Pages
+         Más 
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
