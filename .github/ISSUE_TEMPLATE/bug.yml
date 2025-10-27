@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-      name
+        name
 
   - type: input
     id: system-details
