@@ -1,0 +1,15 @@
+name: Enhancement
+description: Suggest a feature or change
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+      name
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: What do you need?
+    validations:
+      required: true
